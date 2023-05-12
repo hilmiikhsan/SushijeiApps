@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewCartController">
+   <children>
+      <MenuBar prefHeight="22.0" prefWidth="900.0" style="-fx-background-color: #f7991b;" stylesheets="@css/styles.css">
+         <menus>
+            <Menu mnemonicParsing="false" text="Menu">
+               <items>
+                  <MenuItem fx:id="buySushiMenu" mnemonicParsing="false" onAction="#handlePageBuySushi" text="Buy Sushi" />
+                  <MenuItem mnemonicParsing="false" text="View Cart" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Logout">
+               <items>
+                  <MenuItem fx:id="logoutMenu" mnemonicParsing="false" onAction="#handleLogoutPageLink" text="Logout" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane accessibleRole="BUTTON" layoutX="47.0" layoutY="65.0" prefHeight="486.0" prefWidth="808.0" style="-fx-background-color: #e8cf15;">
+         <children>
+            <Label alignment="CENTER" layoutX="-1.0" prefHeight="27.0" prefWidth="809.0" style="-fx-background-color: #474d4a;" text="Cart" textFill="WHITE" />
+            <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="779.0" layoutY="1.0">
+               <image>
+                  <Image url="@../../../../Downloads/—Pngtree—white%20cancel%20button%20icon_4554417.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="30.0" layoutX="-1.0" layoutY="-3.0">
+               <image>
+                  <Image url="@../../../../Downloads/illust58-3141-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="cartTable" layoutX="14.0" layoutY="45.0" onMouseClicked="#getItem" prefHeight="420.0" prefWidth="429.0">
+               <columns>
+                  <TableColumn fx:id="sushiIdCol" prefWidth="81.0" text="Sushi ID" />
+                  <TableColumn fx:id="sushiNameCol" prefWidth="170.0" text="Sushi Name" />
+                  <TableColumn fx:id="sushiPriceCol" prefWidth="93.0" text="Sushi Price" />
+                  <TableColumn fx:id="quantityCol" minWidth="0.0" prefWidth="89.0" text="Quantity" />
+               </columns>
+            </TableView>
+            <Label layoutX="452.0" layoutY="45.0" text="Select Sushi to Buy" />
+            <TextField fx:id="sushiIdTextField" editable="false" layoutX="452.0" layoutY="72.0" prefHeight="34.0" prefWidth="188.0" promptText="ID" style="-fx-background-color: white;" />
+            <Button fx:id="deleteCartButton" layoutX="650.0" layoutY="72.0" mnemonicParsing="false" onAction="#deleteCart" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #a60c0c;" text="Delete From Cart" textFill="WHITE" />
+            <Button fx:id="checkoutButton" layoutX="579.0" layoutY="432.0" mnemonicParsing="false" onAction="#checkoutCart" prefHeight="34.0" prefWidth="99.0" style="-fx-background-color: #0c822a;" text="Check Out" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

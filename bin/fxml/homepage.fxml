@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomepageController">
+   <children>
+      <MenuBar prefHeight="22.0" prefWidth="900.0" style="-fx-background-color: #f7991b;" stylesheets="@css/styles.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu">
+            <items>
+              <MenuItem fx:id="buySushiMenu" mnemonicParsing="false" onAction="#handlePageBuySushi" text="Buy Sushi" />
+                  <MenuItem fx:id="viewCartMenu" mnemonicParsing="false" onAction="#handlePageViewCart" text="View Cart" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Logout">
+              <items>
+              	<MenuItem fx:id="logoutMenu" mnemonicParsing="false" onAction="#handleLogoutPageLink" text="Logout" />
+              </items>                                                                  
+		 </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="userLabel" layoutX="98.0" layoutY="117.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+.menu-bar .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.menu-item .label {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+
